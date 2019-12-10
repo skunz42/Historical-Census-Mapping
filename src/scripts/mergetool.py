@@ -11,15 +11,11 @@ if len(sys.argv) != 4:
     sys.exit()
 
 # reading into two geojson objects, in a GCS (WGS84)
-path = "../../assets/county/"
-path2 = "../../assets/1950/metro/"
-f1 = path + sys.argv[1]
-f2 = path + sys.argv[2]
-f3 = path2 + sys.argv[3]
-with open(f1) as geojson1:
+
+with open(sys.argv[1]) as geojson1:
     poly1_geojson = json.load(geojson1)
 
-with open(f2) as geojson2:
+with open(sys.argv[2]) as geojson2:
     poly2_geojson = json.load(geojson2)
 
 
@@ -40,7 +36,7 @@ mergedPolygon = poly1.union(poly2)
 geojson_out = geojson.Feature(geometry=mergedPolygon, properties={})
 
 # outputting the updated geojson file - for mapping/storage in its GCS format
-with open(f3, 'w') as outfile:
+with open(sys.argv[3], 'w') as outfile:
     json.dump(geojson_out.geometry, outfile)
 outfile.close()
 
