@@ -32,7 +32,7 @@ geojson_out = geojson.Feature(geometry=mergedPolygon, properties={})
 
 # outputting the updated geojson file - for mapping/storage in its GCS format
 with open('Merged_Polygon.json', 'w') as outfile:
-    json.dump(geojson_out.geometry, outfile, indent=3)
+    json.dump(geojson_out.geometry, outfile)
 outfile.close()
 
 # reprojecting the merged polygon to determine the correct area
