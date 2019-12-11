@@ -33,11 +33,13 @@ print(poly2.geom_type)
 mergedPolygon = poly1.union(poly2)
 
 # using geojson module to convert from WKT back into GeoJSON format
-geojson_out = geojson.Feature(geometry=mergedPolygon, properties={"kind":"MSA","name":"Albany","state":"NY","population":514490,"urban":413782})
+geojson_out = geojson.Feature(geometry=mergedPolygon, properties={"kind":"MSA","name":"Buffalo","state":"NY","population":892395,"urban":1089230})
+
+geojson_fc = geojson.FeatureCollection(geojson_out, properties={})
 
 # outputting the updated geojson file - for mapping/storage in its GCS format
 with open(sys.argv[3], 'w') as outfile:
-    json.dump(geojson_out, outfile)
+    json.dump(geojson_fc, outfile)
 outfile.close()
 
 # reprojecting the merged polygon to determine the correct area
