@@ -1,0 +1,3 @@
+{"type":"FeatureCollection","properties":{"kind":"state","state":"KS"},"features":[
+{"type":"Feature","properties":{"kind":"MSA","name":"Wichita","state":"KS","population":222290,"urban":192009},"geometry":{"type":"MultiPolygon","coordinates":[[[[-97.1575,37.9149],[-97.1521,37.9149],[-97.1521,37.4768],[-97.3492,37.4768],[-97.8093,37.4768],[-97.8093,37.7342],[-97.6998,37.7342],[-97.6998,37.9149]]]]}}
+]}
