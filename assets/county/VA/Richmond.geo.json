@@ -1,0 +1,3 @@
+{"type":"FeatureCollection","properties":{"kind":"state","state":"VA"},"features":[
+{"type":"Feature","properties":{"kind":"county","name":"Richmond","state":"VA"},"geometry":{"type":"MultiPolygon","coordinates":[[[[-77.4734,37.5972],[-77.3858,37.5370],[-77.3913,37.5041],[-77.4186,37.5151],[-77.4186,37.4494],[-77.4898,37.4548],[-77.5282,37.5315],[-77.5939,37.5534]]]]}}
+]}
